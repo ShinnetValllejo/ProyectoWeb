@@ -1,0 +1,66 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+
+<link rel="stylesheet" href="{{url_for('static', filename='/css/stylesperfil.css')}}">
+
+<div class="contenedor">
+    <div class="fila0">
+
+        <div class="team-section" id="team">
+            <div class="container text-center">
+                <h1 class="section-title"> Mi Perfil / {{ session['user']['email'] }}</h1>
+                <input type="hidden" id="id" value="{{ session['user']['id'] }}" class="form-control">
+                <div class="members-wrapper row">
+    
+                    <div class="item col-md-6 col-12">
+                        <div class="item-inner">
+                            <div class="profile mb-2">
+                                <img class="profile-image" src="../static/img/harold.jpg" alt="Xiaoying Riley" />
+                            </div>
+                            
+                            <div class="member-content">
+                                <h3 class="member-name">{{ session['user']['name'] }}</h3>
+                                <div class="member-title">Ciudad:{{ session['user']['country'] }}</div>
+                                <div class="member-desc">
+                                   <p> {{ session['user']['description'] }}</p>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3" id="btncontacto">
+                                <a class="btn btn-primary" href="/addapto" role="button">Agregar una nueva propiedad</a>
+                                                          
+                            </div>
+                        </div>
+                    </div>
+
+    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="fila1">
+
+    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-3" id="myapartments">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+  </div>
+
+  <script src="{{url_for('static', filename='js/perfil.js')}}"></script>
+
+
+
+
+{% endblock %}

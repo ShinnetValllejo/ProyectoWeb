@@ -1,0 +1,46 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/css/reserva.css">
+
+<!-- ======= Inicio ======= -->
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Reservar</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <label for="start">Fecha de inicio:</label>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                        </div>
+                        <input type="date" id="start" name="trip-start" value="2018-07-22" class="form-control"
+                           >
+                    </div>
+                    <br>
+                    <label for="start">Fecha de regreso:</label>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>                        </div>
+                        <input type="date" id="end" name="trip-start" value="2018-07-22" class="form-control"
+                            >
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <a class="btn float-right reg_btn" onclick="addreserva()" role="button">Reservar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin Inicio -->
+
+<script src="{{url_for('static', filename='js/reservar.js')}}"></script>
+
+{% endblock %}

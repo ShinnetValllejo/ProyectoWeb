@@ -1,0 +1,87 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/css/addapto.css">
+
+<!-- ======= Inicio ======= -->
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Ingresar Nuevo Inmueble</h3>
+			</div>
+			<div class="card-body">
+				<form>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-heart"></i></span>
+						</div>						
+						<input id="title" name="title" type="text" class="form-control" placeholder="Titulo">						
+					</div>
+					<br>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i style="font-size:24px" class="fa">&#xf155;</i></span>
+						</div>						
+						<input id="price" name="price" type="text" class="form-control" placeholder="Precio por noche">						
+					</div>
+					<br>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-door-open"></i></span>
+						</div>						
+						<input id="rooms" name="rooms" type="text" class="form-control" placeholder="Habitaciones">						
+					</div>
+					<br>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-city"></i></span>
+						</div>						
+						<input id="city" name="city" type="text" class="form-control" placeholder="Ciudad">						
+					</div>
+                    <br>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-flag"></i></span>
+						</div>						
+						<input id="country" name="country" type="text" class="form-control" placeholder="País">						
+					</div>
+					<br>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-location-arrow"></i></span>
+						</div>						
+						<input id="adress" name="adress" type="text" class="form-control" placeholder="Direccion exacta">						
+					</div>
+					<br>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fa fa-align-justify"></i></span>
+						</div>	
+                        <textarea id="excerpt" name="excerpt"  class="form-control" rows="5" cols="50">Reseña: </textarea>					
+					</div>
+					<br>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-images"></i></span>
+						</div>						
+						<input placeholder="Url Imagen" type="text" id="thumbnail" name="thumbnail" class="form-control">						
+					</div>
+					<br>
+					<input type="hidden" id="id" value="{{ session['user']['id'] }}" class="form-control">
+					<br>
+					<div class="form-group">			
+									
+						<a class="btn float-right reg_btn" onclick="addapto()" role="button">Registrar</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="{{url_for('static', filename='js/addapto.js')}}"></script>
+<!-- Fin Inicio -->
+
+{% endblock %}

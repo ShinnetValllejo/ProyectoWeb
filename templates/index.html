@@ -1,0 +1,78 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+
+<link rel="stylesheet" href="{{url_for('static', filename='/css/styles.css')}}">
+
+
+<!-- ======= Inicio ======= -->
+
+<section id="inicio">
+  <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="inicio-container">
+      <h1> Shine-Home</h1>
+      <br>
+      <h2>Busca o renta tu espacio <br> Encuentra el lugar que deseas o aumenta tus ingresos con Shine Home</h2>
+      <a href="/login" class="btn-get-started scrollto" > <b>Get Started</b> </a>
+    </div>
+  </div>
+</section>
+<!-- Fin Inicio -->
+
+<main id="main">
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <div class="container">
+
+    <div class="section-title" data-aos="fade-up">
+      <h2> Descubre experiencias </h2>
+      <p> Escapadas al aire libre, Alojamientos unicos, Encuentra los mejores espacios para vivir tus viajes: </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+        <div class="card" style="background-image: url(../static/img/CASA.jpg);">
+          <div class="card-body">
+            <h5 class="card-title"><a href="">Casas:</a></h5>
+            <p class="card-text">Todas las opciones de Casas en Arriendo que tenemos para ti, disfruta esta eperiencia con toda tu familia.</p>
+            <div class="read-more"><a href="/apartamentos"><i class="bi bi-arrow-right"></i> Ver más</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up">
+        <div class="card" style="background-image: url(../static/img/FINCA.jpg);">
+          <div class="card-body">
+            <h5 class="card-title"><a href="">Fincas:</a></h5>
+            <p class="card-text">Las fincas en Arriendo que tenemos para ti son perfectas para que viajes con todos tus amigos, disfruta los espacios y la buena musica</p>
+            <div class="read-more"><a href="/apartamentos"><i class="bi bi-arrow-right"></i> Ver más</a></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card" style="background-image: url(../static/img/APTO.jpg);">
+          <div class="card-body">
+            <h5 class="card-title"><a href="">Apartamentos</a></h5>
+            <p class="card-text">Siempre estaras a gusto en nuestros acojedores apartamentos, excelentes espacios, todo lo que necesitas para tu tranquilidad.</p>
+            <div class="read-more"><a href="/apartamentos"><i class="bi bi-arrow-right"></i> Ver más</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card" style="background-image: url(../static/img/CABAÑA.jpg);">
+          <div class="card-body">
+            <h5 class="card-title"><a href="">Cabañas</a></h5>
+            <p class="card-text">Alejate del ruido y la ciudad, disfruta de estas cabañas en Antioquia</p>
+            <div class="read-more"><a href="/apartamentos"><i class="bi bi-arrow-right"></i> Ver más</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Features Section -->
+</main> <!-- End #main -->
+
+{% endblock %}
+

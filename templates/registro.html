@@ -1,0 +1,77 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/stylesreg.css">
+
+<!-- ======= Inicio ======= -->
+<div class="container" id="registration-form">
+    <div class="image"></div>
+    <div class="frm">
+        <h1>Regístrate</h1>
+        <form class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="name" class="form-label">Nombre completo:</label>
+                <input type="text" class="form-control" id="name" placeholder="Digite su nombre completo" required>
+                <div class="invalid-feedback">
+                    Debe registrar su nombre completo
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite su email" required>
+                <div class="invalid-feedback">
+                    Debe registrar su nombre email
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description" class="form-label">Descripcion:</label>
+                <input type="text" class="form-control" id="description" placeholder="Digite su descripción o reseña" required>
+                <div class="invalid-feedback">
+                    Debe registrar una descripción
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">País:</label>
+                <select class="form-control" id="country" required>
+                    <option selected disabled value="">Elije tu país</option>
+                    <option value="Colombia">Colombia</option>
+                </select>
+
+                <div class="invalid-feedback">
+                    Debe seleccionar un país
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Ciudad:</label>
+                <select class="form-control" id="city" required>
+                    <option selected disabled value="">Elije tu ciudad</option>
+                    <option value="Medellin">Medellín</option>
+                    <option value="Bogota">Bogotá</option>
+                    <option value="Cali">Cali</option>
+                </select>
+
+                <div class="invalid-feedback">
+                    Debe seleccionar una ciudad
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" class="form-control" id="password" placeholder="Digite su consraseña">
+            </div>
+
+            
+            <div class="form-group">
+                <a class="btn float-right reg_btn" onclick="register()" role="button">Registrarse</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="{{url_for('static', filename='js/register.js')}}"></script>
+  <!-- Fin Inicio -->
+
+{% endblock %}

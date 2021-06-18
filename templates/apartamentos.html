@@ -1,0 +1,42 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+
+<link rel="stylesheet" href="{{url_for('static', filename='/css/styles2.css')}}">
+
+
+<!-- ======= Inicio ======= -->
+
+<section id="inicio">
+  <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="inicio-container">
+      <h1> Shine-Home</h1>
+      <br>
+      <h2>Busca o renta tu espacio <br> Encuentra el lugar que deseas o aumenta tus ingresos con Shine Home</h2>
+    </div>
+  </div>
+</section>
+<!-- Fin Inicio -->
+
+<main id="main">
+<input type="hidden" id="id" value="{{ session['user']['id'] }}" class="form-control">
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <div class="container">
+
+    <div class="section-title" data-aos="fade-up">
+      <h2> Ver todos los Apartamentos</h2>
+    </div>
+    <br>
+    <br>
+    <div class="row" style="gap: 20px;" id="apartbx">
+
+    </div>
+
+  </div>
+</section><!-- End Features Section -->
+</main> <!-- End #main -->
+
+<script src="{{url_for('static', filename='js/Apartamentos.js')}}"></script>
+{% endblock %}
+
